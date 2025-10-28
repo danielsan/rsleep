@@ -18,8 +18,14 @@ jobs:
         with:
           toolchain: stable
 
+      - name: Run tests
+        run: cargo test
+
       - name: Verify package can be built
         run: cargo build --release
+
+      - name: Dry-run publish
+        run: cargo publish --dry-run
 
       - name: Publish to crates.io
         run: cargo publish --token ${{ secrets.CRATES_IO_TOKEN }}
