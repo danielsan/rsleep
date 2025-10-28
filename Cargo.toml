@@ -1,7 +1,14 @@
 [package]
 name = "rsleep"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+authors = ["Daniel Santana <github@danielsantana.net>"]
+description = "A prettier version of the sleep command that shows you something is going on"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/danielsan/rsleep"
+keywords = ["sleep", "command", "utility"]
+categories = ["command-line-utils"]
 
 [profile.release]
 opt-level = "s"
