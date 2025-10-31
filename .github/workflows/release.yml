@@ -99,6 +99,9 @@ jobs:
           cd target/${{ matrix.target }}/release
           if (Test-Path rsleep.exe) {
             Compress-Archive -Path rsleep.exe -DestinationPath ../../../rsleep-${{ steps.tag.outputs.tag }}-${{ matrix.target }}.zip
+          } else {
+            Write-Error "Error: rsleep.exe binary not found!"
+            exit 1
           }
 
       - name: Upload artifact to GitHub Release
