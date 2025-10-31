@@ -87,6 +87,9 @@ jobs:
           cd target/${{ matrix.target }}/release
           if [ -f rsleep ]; then
             tar czf ../../../rsleep-${{ steps.tag.outputs.tag }}-${{ matrix.target }}.tar.gz rsleep
+          else
+            echo "Error: rsleep binary not found!" >&2
+            exit 1
           fi
 
       - name: Prepare binary (Windows)
