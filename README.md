@@ -1,8 +1,8 @@
 # rsleep
 
-[![Crates.io](https://img.shields.io/crates/v/rsleep.svg)](https://crates.io/crates/rsleep)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Rust](https://img.shields.io/badge/rust-1.70%2B-blue.svg)](https://www.rust-lang.org)
+[![Crates.io](https://img.shields.io/crates/v/rsleep?style=for-the-badge&logo=rust)](https://crates.io/crates/rsleep)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Rust](https://img.shields.io/badge/rust-1.70%2B-blue?style=for-the-badge&logo=rust)](https://www.rust-lang.org)
 
 A prettier version of the sleep command that shows you something is going on.
 
