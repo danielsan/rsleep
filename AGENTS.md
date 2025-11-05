@@ -67,7 +67,7 @@ rsleep/
 ├── Cargo.toml            # Project manifest and dependencies
 ├── Cargo.lock            # Locked dependency versions
 ├── .github/
-│   ├── workflows/        # CI/CD workflows (release and publish)
+│   ├── workflows/        # CI/CD workflows (release, publish, and security)
 │   └── copilot-instructions.md  # Detailed development guidelines
 ├── README.md             # User-facing documentation
 ├── LICENSE               # MIT License
@@ -243,6 +243,7 @@ Changes to these can affect:
 3. **No Unsafe Code**: Avoid `unsafe` blocks unless absolutely necessary
 4. **Minimal Attack Surface**: Small binary with few dependencies reduces risk
 5. **Error Handling**: Use proper error handling, avoid panics in production
+6. **CodeQL Analysis**: Automated security scanning runs via GitHub Actions (codeql.yml)
 
 ## Troubleshooting Guide
 
@@ -330,6 +331,7 @@ Releases are automated through GitHub Actions:
 
 - **release.yml**: Builds and publishes binaries for multiple platforms
 - **publish.yml**: Publishes the crate to crates.io
+- **codeql.yml**: Runs CodeQL security analysis for Rust code
 
 As an agent, you typically **DO NOT** need to manage releases. If a release is needed:
 
@@ -376,5 +378,5 @@ If you encounter ambiguity or need clarification:
 
 ---
 
-**Last Updated**: 2025-11-03
+**Last Updated**: 2025-11-05
 **Maintained By**: Repository maintainers and contributors
