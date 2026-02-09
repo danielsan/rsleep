@@ -20,6 +20,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         include:
           # Linux targets
@@ -43,7 +44,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Determine tag
         id: tag
